@@ -1,0 +1,7 @@
+<h1>Doses for <%= @cocktail %></h1>
+<%@doses.each do |dose| %>
+<%= dose.ingredient_id.name %>
+<%= dose.description %>
+<% end %>
+
+<p>Find me in app/views/doses/index.html.erb</p>
