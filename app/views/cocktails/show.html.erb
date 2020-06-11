@@ -8,7 +8,7 @@
           <p><%=dose.description %></p>
         </div>
         <div class="col-4">
-          <p><%= link_to 'Delete dose', cocktail_dose_path(@cocktail), method: :delete, data: {confirm: "Are you sure ?"} %></p>
+          <p><%= link_to 'Delete dose', dose_path(dose), method: :delete, data: {confirm: "Are you sure ?"} %></p>
         </div>
       </div>
   </div>
