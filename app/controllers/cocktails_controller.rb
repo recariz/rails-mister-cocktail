@@ -15,7 +15,7 @@ class CocktailsController < ApplicationController
   def create
     @cocktail = Cocktail.new(strong_params)
     @cocktail.save
-    redirect_to root_path
+    redirect_to root
   end
 
   private
