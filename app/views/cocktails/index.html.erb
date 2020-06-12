@@ -1,16 +1,26 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://static.essential-adventure.co.uk/production/2be68c3237d960de19c22066f52e85d7/cocktail-making-masterclass_medium-header-cropped.jpg);">
   <div class="container">
     <h1>The cocktail club</h1>
+    <br>
+    <br>
+    <div class="btn btn-basic"><%= link_to "Create a new cocktail", '/cocktails/new' %>
+</div>
   </div>
 </div>
 <div class="row">
   <% @cocktails.each do|cocktail| %>
       <div class="col-4">
-        <div class="card" style="width: 18rem;">
-          <div class="card-img-top" <%= cl_image_tag cocktail.photo.key, height: 300, width: 400, crop: :fill %>></div>
+        <div class="card">
+          <div class='img-card'><%= cl_image_tag cocktail.photo.key, height: 250, crop: :fill%></div>
           <div class="card-body">
             <h5 class="card-title"><%= cocktail.name %></h5>
-            <div class="btn btn-primary"><%= link_to 'View Cocktail', "/cocktails/#{cocktail.id}" %></div>
+            <div class="cocktail-description">
+              <% cocktail.doses.each do |dose| %>
+              <p><strong><%= dose.ingredient.name %></strong></p>
+              <p><%= dose.description %></p>
+              <% end %>
+            </div>
+            <div class="btn btn-basic btn-card"><%= link_to 'View Cocktail', "/cocktails/#{cocktail.id}" %></div>
           </div>
         </div>
       </div>
@@ -18,8 +28,7 @@
 </div>
 
 
-<div class="btn btn-primary"><%= link_to "Create a new cocktail", '/cocktails/new' %>
-</div>
+
 
 
 

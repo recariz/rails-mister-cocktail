@@ -1,14 +1,27 @@
 // Place all the styles related to the cocktails controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
-.btn-primary a{
+.btn-basic {
+  background-color: #C44E4A ;
+  border: 2px solid #C44E4A;
+  a{
   color: white;
+  }
+}
+
+.submit {
+  background-color: #C44E4A ;
+  border: 2px solid #C44E4A;
+  a{
+  color: white;
+  }
 }
 
 .banner {
   background-size: cover;
   background-position: center;
   padding: 150px 0;
+  margin-bottom: 20px;
   h1 {
   margin: 0;
   color: white;
@@ -16,5 +29,37 @@
   font-size: 32px;
   font-weight: bold;
   }
+}
+
+.card {
+  margin: 5px;
+  box-shadow: 5px 10px rgba(197, 79, 75, 0.2);
+  height: 95%;
+  h5 {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  .img-card img{
+    width: 100%;
+  }
+  .cocktail-description {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
+
+.link-red-italics a{
+  color: #C44E4A;
+  text-decoration: underline;
+  font-style: italic;
+  font-family: italic;
+}
+
+.bottom-border {
+  bottom-border: 2px solid black;
+}
+.center {
+  text-align: center;
 }
 
