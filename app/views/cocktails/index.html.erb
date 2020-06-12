@@ -7,7 +7,7 @@
   <% @cocktails.each do|cocktail| %>
       <div class="col-4">
         <div class="card" style="width: 18rem;">
-          <img class="card-img-top" src="https://picsum.photos/id/<%=rand(100..999)%>/200/300" alt="Card image cap">
+          <div class="card-img-top" <%= cl_image_tag cocktail.photo.key, height: 300, width: 400, crop: :fill %>></div>
           <div class="card-body">
             <h5 class="card-title"><%= cocktail.name %></h5>
             <div class="btn btn-primary"><%= link_to 'View Cocktail', "/cocktails/#{cocktail.id}" %></div>

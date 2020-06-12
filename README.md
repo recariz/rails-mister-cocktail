@@ -22,3 +22,5 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+//Cloudinary::Uploader.upload("sample.jpg", :crop => "limit", :tags => "samples", :width => 3000, :height => 2000)//
